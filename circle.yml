@@ -12,8 +12,8 @@ dependencies:
 
 test:
   override:
-    - docker run -d --name r10ktest -e R10K_ENV_REPO="https://github.com/abstractitptyltd/puppet-env-abstractit.git" abstractit/r10k:$version; sleep 60
-    - docker logs r10ktest | grep "Deploying environment /etc/puppet/environments/production"
+    - docker run -d --name r10ktest -e R10K_ENV_REPO='https://github.com/abstractitptyltd/puppet-env-abstractit' abstractit/r10k:$version; sleep 60
+    # - docker logs r10ktest | grep "Deploying environment"
 
 deployment:
   hub:
