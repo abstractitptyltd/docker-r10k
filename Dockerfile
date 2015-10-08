@@ -1,13 +1,13 @@
-FROM abstractit/puppet-base:0.1.1
+FROM abstractit/puppet-base:0.1.3
 MAINTAINER Abstract IT Pty Ltd <dev@abstractit.com.au>
-LABEL vendor="Abstract IT Pty Ltd"
-LABEL au.com.abstractit.version="0.1.0"
-LABEL au.com.abstractit.is-beta="true"
-LABEL au.com.abstractit.release-date="2015-10-07"
+LABEL vendor="Abstract IT Pty Ltd" \
+  au.com.abstractit.version="0.1.1" \
+  au.com.abstractit.is-beta="true" \
+  au.com.abstractit.release-date="2015-10-08"
 
-ENV R10K_VERSION="1.5.1"
-ENV GIT_VERSION="1.8.3.1"
-ENV R10K_ENV_REPO=""
+ENV R10K_VERSION="1.5.1" \
+  GIT_VERSION="1.8.3.1" \
+  R10K_ENV_REPO=""
 
 RUN yum install -y \
   git-$GIT_VERSION \
@@ -20,7 +20,7 @@ RUN mkdir -p /etc/puppetlabs/r10k \
   && mkdir -p /opt/puppetlabs/r10k/cache \
   && mkdir -p /etc/puppet/environments
 
-# install r10k
+# install r10k gem
 RUN gem install r10k --version $R10K_VERSION --no-ri --no-rdoc
 
 # add config/startup script
