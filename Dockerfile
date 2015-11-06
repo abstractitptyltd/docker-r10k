@@ -1,9 +1,9 @@
-FROM abstractit/puppet-base:0.1.3
+FROM abstractit/puppet-base:0.1.4
 MAINTAINER Abstract IT Pty Ltd <dev@abstractit.com.au>
 LABEL vendor="Abstract IT Pty Ltd" \
-  au.com.abstractit.version="0.1.1" \
+  au.com.abstractit.version="0.1.2" \
   au.com.abstractit.is-beta="true" \
-  au.com.abstractit.release-date="2015-10-08"
+  au.com.abstractit.release-date="2015-11-06"
 
 ENV R10K_VERSION="1.5.1" \
   GIT_VERSION="1.8.3.1" \
